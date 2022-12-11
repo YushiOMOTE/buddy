@@ -1,0 +1,22 @@
+[package]
+name = "buddy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.66"
+aws-config = "0.51.0"
+aws-sdk-dynamodb = "0.21.0"
+reqwest = { version = "0.11.13", features = ["json"] }
+serde = { version = "1.0.149", features = ["derive"] }
+serde_dynamo = { version = "4.0.9", features = ["aws-sdk-dynamodb+0_21"] }
+tokio = { version = "1", features = ["full"] }
+lambda_http = { version = "0.7", default-features = false, features = ["apigw_http"] }
+lambda_runtime = "0.7"
+tracing = { version = "0.1", features = ["log"] }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt"] }
+openssl = { version = "0.10", features = ["vendored"] }
+line-bot-sdk-rust = { git = "https://github.com/nanato12/line-bot-sdk-rust.git" }
+http = "0.2.8"
+serde_json = "1.0.89"
+aws-sdk-secretsmanager = "0.21.0"
