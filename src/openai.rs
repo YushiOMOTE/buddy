@@ -53,8 +53,8 @@ impl OpenAI {
         let request = Request {
             model: "text-davinci-003".into(),
             prompt: prompt.into(),
-            temperature: 0.0,
-            max_tokens: 128,
+            temperature: 0.1,
+            max_tokens: 2048,
         };
 
         let response = self
