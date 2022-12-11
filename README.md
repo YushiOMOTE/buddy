@@ -2,13 +2,13 @@
 
 OpenAI-based LINE bot with memory (experimental)
 
-![](./assets/demo.jpg)
+<img src="./assets/demo.jpg" width="300">
 
 ``` mermaid
 graph LR
     Line(Line) -->|Webhook| Backend
     subgraph AWS
-        Backend("Backend\n(Lambda)") --> Storage("Context Storage\n(DynamoDB)")
+        Backend("Backend (Lambda)") --> Storage("Context Storage (DynamoDB)")
     end
     Backend --> OpenAI("Open AI")
 ```
